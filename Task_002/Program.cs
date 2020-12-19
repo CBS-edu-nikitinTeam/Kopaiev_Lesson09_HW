@@ -4,7 +4,8 @@ namespace Task_002
 {
     class Program
     {
-        static void DefineArrayLenght(out int arrLenght)
+
+        static void DefineArrayLenght(out int arrLenght) 
         {
             while (true)
             {
@@ -16,31 +17,31 @@ namespace Task_002
                 else break;
             }
         }
-        static int[] FillArray(int[] sourceArray)
+        static int[] FillArray(int[] sourceArray) 
         {
             Random rnd = new Random();
 
             for (int i = 0; i < sourceArray.Length; i++)
             {
-                sourceArray[i] = rnd.Next(-5, 66);
+                sourceArray[i] = rnd.Next(-5,66);
             }
 
             return sourceArray;
         }
-        static void ShowCreatedArray(int[] arr)
+        static void ShowCreatedArray(int[] arr) 
         {
             foreach (var value in arr)
             {
-                Console.Write(value + " ");
+                Console.Write(value+" ");
             }
             Console.Write("\n");
         }
-        static void ShowBiggestElement(int[] arr)
+        static void ShowBiggestElement(int[] arr) 
         {
             int temp = default;
             foreach (var value in arr)
             {
-                if (temp <= value)
+                if (temp <= value) 
                 {
                     temp = value;
                 }
@@ -61,7 +62,7 @@ namespace Task_002
 
             Console.WriteLine($"The lowest element is {temp}");
         }
-        static void ShowSumOfArrayElements(int[] arr)
+        static void ShowSumOfArrayElements(int[] arr) 
         {
             int sum = default;
             foreach (var item in arr)
@@ -70,16 +71,16 @@ namespace Task_002
             }
             Console.WriteLine($"Summ of all elements is {sum}");
         }
-        static void ShowMiddleArifmetical(int[] arr)
+        static void ShowMiddleArifmetical(int[] arr) 
         {
             int sum = default;
             foreach (var item in arr)
             {
                 sum += item;
             }
-            Console.WriteLine($"Middle Ariphmetical of all elements is {sum / arr.Length}");
+            Console.WriteLine($"Middle Ariphmetical of all elements is {sum/arr.Length}");
         }
-        static void ShowOnlyNotEvenElements(int[] arr)
+        static void ShowOnlyNotEvenElements(int[] arr) 
         {
             Console.Write("All Not even elements are: ");
             foreach (var element in arr)
